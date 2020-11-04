@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChiTietphim">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hinh_nen_2"
+        android:id="@+id/img_hinh_hen"
+        />
+
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="175dp"
+        android:transitionName="sharedName"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tiec_trang_mau"
+        android:id="@+id/img_chi_tiet_phim"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiệc Trăng Máu"
+        android:textSize="22sp"
+        android:layout_toRightOf="@+id/img_chi_tiet_phim"
+        android:layout_below="@id/img_hinh_hen"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txt_title"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thể loại: "
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/img_chi_tiet_phim"
+        android:layout_below="@id/txt_title"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txt34"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18+"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/txt34"
+        android:layout_below="@id/txt_title"
+        android:layout_marginTop="5dp"
+        android:id="@+id/txtTheLoai"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="8dp"
+        android:layout_below="@+id/img_chi_tiet_phim"
+        android:layout_margin="10dp"
+        android:id="@+id/detail_movie"
+        android:text="cai gi do rat dai ma neu bay gio tao viet het thi hoi met nen la tao quyet dinh khong viet nua ahihiiihihiihiii"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Mua Vé"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custom_btn_muave"
+        android:textColor="#fff"
+        android:id="@+id/btnMuaVe"
+        />
+
+
+
+</RelativeLayout>

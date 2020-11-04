@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/imgHinh2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/icon_android" />
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_marginLeft="14dp"
+            android:id="@+id/txtTenPhim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên phim: " />
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_toRightOf="@id/txtTenPhim"
+            android:id="@+id/txtTiecTrangMau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiệc trăng máu" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtMaPhim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã Phim:" />
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_toRightOf="@id/txtMaPhim"
+            android:id="@+id/txtHienMaPhim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PhimHayNhatNe" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/txtSoLuong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số Lượng:" />
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_toRightOf="@id/txtSoLuong"
+            android:id="@+id/txtHienSoLuong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:id="@+id/txtSoTien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số Tiền:" />
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_toRightOf="@id/txtSoTien"
+            android:layout_marginRight="5dp"
+            android:id="@+id/txtHienSoTien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="95.000D" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/button"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:text="Thanh Toán" />
+
+
+</LinearLayout>

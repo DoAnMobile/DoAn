@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThongTin">
+
+   <ImageView
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:layout_marginTop="10dp"
+       android:id="@+id/avatar"
+       android:background="@drawable/icon"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:hint="Tên User"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tenUser"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:hint="Mật Khẩu"
+        android:layout_marginTop="50dp"
+        android:id="@+id/matkhau"/>
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="10dp"
+     android:layout_marginTop="120dp"
+     android:text="Họ Tên :"
+     android:textColor="#1E1D1D"
+     android:textSize="25dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/hoten"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email :"
+        android:textColor="#1E1D1D"
+        android:layout_marginTop="170dp"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/email"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SDT :"
+        android:textColor="#1E1D1D"
+        android:layout_marginTop="220dp"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/sdt"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày Sinh :"
+        android:textColor="#1E1D1D"
+        android:layout_marginTop="270dp"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="140dp"
+        android:id="@+id/ngaysinh"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa Chỉ :"
+        android:textColor="#1E1D1D"
+        android:layout_marginTop="320dp"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="520dp"
+        android:background="#3F51B5"
+        android:text="Cập Nhật"
+        android:id="@+id/capnhatUser"/>
+
+    <EditText
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="60dp"
+        android:id="@+id/diachi"/>
+
+    <AutoCompleteTextView
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="410dp"
+        android:hint="Tỉnh/Thành Phố"
+        android:id="@+id/thanhpho" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/arrow"
+        android:layout_marginTop="415dp"
+        android:layout_marginLeft="300dp" />
+
+ <AutoCompleteTextView
+     android:layout_width="290dp"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="60dp"
+     android:layout_marginTop="460dp"
+     android:hint="Phường/Xã/Huyện"
+     android:id="@+id/phuongxa" />
+
+ <ImageView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:background="@drawable/arrow"
+     android:layout_marginTop="465dp"
+     android:layout_marginLeft="300dp" />
+
+</RelativeLayout>
