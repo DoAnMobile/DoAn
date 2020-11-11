@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChiTietphim">
+    tools:context=".ui.ChiTietphim">
 
     <ImageView
         android:layout_width="match_parent"
@@ -73,18 +73,24 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
         android:text="Mua Vé"
         android:layout_margin="10dp"
         android:textSize="18sp"
         android:textAllCaps="false"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/custom_btn_muave"
+        android:background="@color/colorOrange"
         android:textColor="#fff"
         android:id="@+id/btnMuaVe"
         />
 
-
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/btn_chitiet_back"
+        android:src="@drawable/ic_back"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:layout_margin="5dp"
+        />
 
 </RelativeLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.chau.doan">
+    package="com.chau.phimplus">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".user"></activity>
-        <activity android:name=".ChiTietphim" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.Account"></activity>
+        <activity android:name=".ui.GioHangActivity"></activity>
+        <activity android:name=".ui.DangKy"></activity>
+        <activity android:name=".ui.row_list_account" />
+        <activity
+            android:name=".ui.ChiTietphim"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

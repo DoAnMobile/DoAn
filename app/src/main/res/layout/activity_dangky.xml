@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorOrange"
+        >
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_account_back"
+            android:src="@drawable/ic_back"
+            android:background="@color/colorOrange"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Đăng ký"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+
+        <ImageButton
+            android:id="@+id/imgAddAvatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:padding="25dp"
+            app:srcCompat="@drawable/ic_add_avt"
+            />
+
+        <EditText
+            android:hint="Họ và tên"
+            android:id="@+id/edtHoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+             />
+
+        <EditText
+            android:hint="Mật khẩu"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edtPassword1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType="textPassword" />
+        <EditText
+            android:hint="Nhập lại mật khẩu"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edtPasswordAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:hint="Số điện thoại"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edtSDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/btnDangKy1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="Đăng ký"
+            android:textColor="#fff"
+            android:background="@color/colorOrange"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/txtText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn đã có tài khoản?"
+                android:layout_toLeftOf="@+id/btn_backToDangNhap"
+                android:layout_marginRight="10dp"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_backToDangNhap"
+                android:layout_alignParentRight="true"
+                android:text="Đăng Nhập"
+                android:background="@color/colorOrange"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
