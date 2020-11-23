@@ -19,7 +19,16 @@ public interface Dataserver {
     @FormUrlEncoded
     Call<List<TaiKhoan>> savePost(
             @Field("Phone") String Phone,
-            @Field("Password") String Password
+            @Field("Password") String Password,
+            @Field("FullName") String FullName
+    );
+
+    @POST("update-account.php")
+    @FormUrlEncoded
+    Call<List<TaiKhoan>> saveAccount(
+            @Field("Password") String Phone,
+            @Field("Password") String Password,
+            @Field("FullName") String FullName
     );
 
 }

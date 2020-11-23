@@ -190,7 +190,7 @@ public class AccountsFragment extends Fragment {
     {
 
         // Tạo bản tài khoản
-        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), TrangThai VARCHAR(10))";
+        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), FullName VARCHAR(100), TrangThai VARCHAR(10))";
         localData.AddData(queryTaoBang);
 
         // Tạo bảng kiểm tra lần đầu khởi động
@@ -231,15 +231,15 @@ public class AccountsFragment extends Fragment {
                 Cursor cursor = GetLocalData(queryLayTaiKhoan);
                 while (cursor.moveToNext())
                 {
-                    if (cursor.getString(3).trim().equalsIgnoreCase("true"))
+                    if (cursor.getString(4).trim().equalsIgnoreCase("true"))
                     {
                         // Lấy tên tài khoản
                         curTaiKhoan = cursor.getString(1);
 
                         // Nếu đã đăng nhập thì tắt nút ĐĂNG NHẬP
-                        String nameAcc = cursor.getString(1);
+                        String fullName = cursor.getString(3);
                         btnLogin.setVisibility(View.INVISIBLE);
-                        txtAccountName.setText(nameAcc);
+                        txtAccountName.setText(fullName);
                         txtAccountName.setVisibility(View.VISIBLE);
 
                         // Nếu đã đăng nhập thì hiện chức năng ĐĂNG XUẤT

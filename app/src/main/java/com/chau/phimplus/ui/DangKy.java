@@ -25,7 +25,7 @@ public class DangKy extends AppCompatActivity {
 
     Button btnDN1, btnDK;
     ImageButton btnBack;
-    EditText edPhone, edPass, edRePass;
+    EditText edPhone, edPass, edRePass, edFullName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,12 +63,13 @@ public class DangKy extends AppCompatActivity {
 
     private void AnhXa() {
 
-        btnDN1 = (Button) findViewById(R.id.btn_backToDangNhap);
-        btnDK = (Button) findViewById(R.id.btnDangKy1);
-        btnBack = (ImageButton) findViewById(R.id.btn_account_back);
-        edPass = (EditText) findViewById(R.id.edtPassword1);
-        edPhone = (EditText) findViewById(R.id.edtSDT);
-        edRePass = (EditText) findViewById(R.id.edtPasswordAgain);
+        btnDN1      = (Button) findViewById(R.id.btn_backToDangNhap);
+        btnDK       = (Button) findViewById(R.id.btnDangKy1);
+        btnBack     = (ImageButton) findViewById(R.id.btn_account_back);
+        edPass      = (EditText) findViewById(R.id.edtPassword1);
+        edPhone     = (EditText) findViewById(R.id.edtSDT);
+        edRePass    = (EditText) findViewById(R.id.edtPasswordAgain);
+        edFullName  = (EditText) findViewById(R.id.edtHoTen);
 
     }
 
@@ -81,6 +82,7 @@ public class DangKy extends AppCompatActivity {
                 String Phone = edPhone.getText().toString();
                 String Pass = edPass.getText().toString();
                 String reMatKhau = edRePass.getText().toString();
+                String FullName = edFullName.getText().toString();
 
                 if (Phone.length() > 10)
                 {
@@ -98,10 +100,14 @@ public class DangKy extends AppCompatActivity {
                 {
                     Mess("Mật khẩu phải hơn 6 ký tự");
                 }
+                else if (FullName.length() < 1)
+                {
+                    Mess("Tên không được để trống");
+                }
                 else {
 
                     // INSERT DATA
-                    InsertData(Phone, Pass);
+                    InsertData(Phone, Pass, FullName);
 
                     finish();
 
@@ -112,12 +118,12 @@ public class DangKy extends AppCompatActivity {
 
     }
 
-    public void InsertData(String Phone, String Pass){
+    public void InsertData(String Phone, String Pass, String FullName){
 
         Dataserver dataserver = APIserver.getServer();
         Call<List<TaiKhoan>> callback ;
 
-        callback = dataserver.savePost(Phone, Pass);
+        callback = dataserver.savePost(Phone, Pass, FullName);
 
         callback.enqueue(new Callback<List<TaiKhoan>>() {
             @Override

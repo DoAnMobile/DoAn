@@ -35,11 +35,9 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_vertical"
         android:layout_marginTop="10dp"
         >
         <ImageView
@@ -49,30 +47,19 @@
             android:background="@drawable/ic_account_02"
             android:layout_marginLeft="10dp"
             />
-        <RelativeLayout
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Số điện thoại"
+            android:layout_toRightOf="@+id/avatar"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            >
+            android:layout_centerVertical="true"
+            android:textSize="23sp"
+            android:id="@+id/txtSdt"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Tài khoản"
-                android:layout_marginTop="10dp"
-                android:textSize="18sp"
-                android:id="@+id/tenUser"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Mật khẩu"
-                android:layout_marginTop="50dp"
-                android:textSize="18sp"
-                android:id="@+id/matkhau"/>
-        </RelativeLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:textSize="18sp"
             android:hint="Họ tên"
             android:id="@+id/hoten"/>
@@ -97,18 +85,32 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:textSize="18sp"
-            android:hint="Số điện thoại"
-            android:id="@+id/sdt"/>
+            android:hint="Ngày sinh"
+            android:id="@+id/ngaysinh"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:hint="Mật khẩu"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
+            android:inputType="textPassword"
             android:textSize="18sp"
-            android:hint="Ngày sinh"
-            android:id="@+id/ngaysinh"/>
+            android:id="@+id/matkhau"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập lại mật khẩu"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/matkhau"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:id="@+id/rematkhau"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -128,7 +130,7 @@
             android:textColor="#fff"
             android:text="Cập Nhật"
             android:textSize="18sp"
-            android:id="@+id/capnhatUser"
+            android:id="@+id/btnUpdate"
             />
 
     </LinearLayout>
