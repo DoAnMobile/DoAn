@@ -42,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
 
         AnhXa();
 
+        CreateLocalData();
+
         XuLy();
 
     }
@@ -139,7 +141,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     // Local data
-
     public void CreateLocalData()
     {
         // Tạo bản tài khoản
@@ -149,13 +150,6 @@ public class LoginActivity extends AppCompatActivity {
         // Tao bang kiem tra lan khoi dong
         String queryTaoBangCheck = "Create Table if not exists CheckLogin (ID Integer Primary Key, Stt VARCHAR(10))";
         localData.AddData(queryTaoBangCheck);
-    }
-
-    private void Logout(String curTaiKhoan) {
-
-        String queryLogout = "Update TaiKhoan Set TrangThai = 'false' Where TaiKhoan = '" + curTaiKhoan + "'";
-        localData.AddData(queryLogout);
-
     }
 
     public Cursor GetLocalData(String queryLayTaiKhoan)

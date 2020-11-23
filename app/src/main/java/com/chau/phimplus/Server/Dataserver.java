@@ -26,7 +26,7 @@ public interface Dataserver {
     @POST("update-account.php")
     @FormUrlEncoded
     Call<List<TaiKhoan>> saveAccount(
-            @Field("Password") String Phone,
+            @Field("Phone") String Phone,
             @Field("Password") String Password,
             @Field("FullName") String FullName
     );

@@ -78,15 +78,16 @@
             android:hint="Họ tên"
             android:id="@+id/hoten"/>
 
-        <EditText
+        <DatePicker
+            android:id="@+id/ngaysinh"
+            style="@android:style/Widget.DatePicker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:textSize="18sp"
-            android:hint="Ngày sinh"
-            android:id="@+id/ngaysinh"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:datePickerMode="spinner"
+            android:textSize="18sp" />
 
         <EditText
             android:layout_width="match_parent"

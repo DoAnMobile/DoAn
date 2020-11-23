@@ -35,6 +35,8 @@ public class Account extends AppCompatActivity {
 
     EditText edName, edPass, edRePass;
 
+    String curSdt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,40 +66,16 @@ public class Account extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String Phone        = "";
                 String FullName     = edName.getText().toString();
                 String Pass         = edPass.getText().toString();
                 String reMatKhau    = edRePass.getText().toString();
-
-                String getID = "Select MAX(ID) from CheckLogin";
-                Cursor curID = GetLocalData(getID);
-
-                while (curID.moveToNext())
-                {
-                    if (curID.getInt(0) == 1)
-                    {
-                        String queryLayTaiKhoan = "Select * From TaiKhoan";
-                        Cursor cursor = GetLocalData(queryLayTaiKhoan);
-                        while (cursor.moveToNext())
-                        {
-                            if (cursor.getString(4).trim().equalsIgnoreCase("true"))
-                            {
-                                // Lấy thông tin tài khoản ra
-                                String sdt = cursor.getString(1).toString();
-
-                                // Gán thông tin đã lấy lên giao diện
-                                Phone = sdt;
-
-                            }
-                        }
-                    }
-                }
 
                 if (Pass.equalsIgnoreCase(reMatKhau) == false)
                 {
                     Mess("Mật khẩu nhập lại không đúng");
                 }
-                else if (Pass.length() < 6)
+                else
+                if (Pass.length() < 6)
                 {
                     Mess("Mật khẩu phải hơn 6 ký tự");
                 }
@@ -108,12 +86,10 @@ public class Account extends AppCompatActivity {
                 else {
 
                     // INSERT DATA
-                    UpdateData(Phone, Pass, FullName);
+                    UpdateData(curSdt, Pass, FullName);
 
                     // UPDATE LOCAL DATA
-                    UpdateLocalData(Phone, Pass, FullName);
-
-                    Mess("Cập nhật thành công");
+                    UpdateLocalData(Pass, FullName);
 
                 }
 
@@ -153,6 +129,7 @@ public class Account extends AppCompatActivity {
                     {
                         // Lấy thông tin tài khoản ra
                         String sdt = cursor.getString(1).toString();
+                        curSdt = cursor.getString(1).toString();
                         String pass = cursor.getString(2).toString();
                         String name = cursor.getString(3).toString();
 
@@ -161,6 +138,8 @@ public class Account extends AppCompatActivity {
                         edPass.setText(pass);
                         edRePass.setText("");
                         edName.setText(name);
+
+                        Mess(curSdt);
 
                     }
                 }
@@ -194,9 +173,11 @@ public class Account extends AppCompatActivity {
         });
     }
 
-    public void UpdateLocalData(String Phone, String Pass, String FullName)
+//    Không cập nhật được password local
+    public void UpdateLocalData(String ahi, String FullName)
     {
-        String query = "UPDATE TaiKhoan SET Pass = '" + Pass + "', FullName = '" + FullName + "' WHERE Phone = '" + Phone + "'";
+//        String query = "UPDATE TaiKhoan SET FullName = '" + FullName + "', Pass = '" + ahi + "' WHERE TrangThai = 'true'";
+        String query = "UPDATE TaiKhoan SET FullName = '" + FullName + "' WHERE TrangThai = 'true'";
         localData.AddData(query);
     }
 
