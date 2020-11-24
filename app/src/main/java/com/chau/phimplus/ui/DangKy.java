@@ -18,8 +18,8 @@ import com.chau.phimplus.R;
 import com.chau.phimplus.Server.APIserver;
 import com.chau.phimplus.Server.Dataserver;
 
+import java.sql.Date;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -189,6 +189,8 @@ public class DangKy extends AppCompatActivity {
 
             }
         }, Year, Month, Date);
+
+        datePickerDialog.getDatePicker().setMaxDate(Now.getTimeInMillis());
 
         datePickerDialog.show();
     }

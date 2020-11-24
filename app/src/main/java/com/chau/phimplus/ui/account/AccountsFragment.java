@@ -126,13 +126,11 @@ public class AccountsFragment extends Fragment {
         chucNang.add("Vé đã mua");
         chucNang.add("Giỏ hàng");
         chucNang.add("Yêu thích");
-        chucNang.add("Cài đặt tài khoản");
         chucNang.add("Cài đặt ứng dụng");
 
         iconRow.add(R.drawable.ic_tickets);
         iconRow.add(R.drawable.ic_cart);
         iconRow.add(R.drawable.ic_heart);
-        iconRow.add(R.drawable.ic_account_setting_02);
         iconRow.add(R.drawable.ic_app_setting);
 
         myAdapter adapter = new myAdapter(getContext(), chucNang, iconRow);
@@ -242,6 +240,9 @@ public class AccountsFragment extends Fragment {
                         txtAccountName.setText(fullName);
                         txtAccountName.setVisibility(View.VISIBLE);
 
+                        // Nếu đã đăng nhập thì hiện chức năng sửa tài khoản
+                        chucNang.add("Cài đặt tài khoản");
+                        iconRow.add(R.drawable.ic_account_setting_02);
                         // Nếu đã đăng nhập thì hiện chức năng ĐĂNG XUẤT
                         chucNang.add("Đăng xuất");
                         iconRow.add(R.drawable.ic_logout_02);

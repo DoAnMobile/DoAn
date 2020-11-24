@@ -141,19 +141,21 @@ public class Account extends AppCompatActivity {
                 Cursor cursor = GetLocalData(queryLayTaiKhoan);
                 while (cursor.moveToNext())
                 {
-                    if (cursor.getString(4).trim().equalsIgnoreCase("true"))
+                    if (cursor.getString(5).trim().equalsIgnoreCase("true"))
                     {
                         // Lấy thông tin tài khoản ra
                         String sdt = cursor.getString(1).toString();
                         curSdt = cursor.getString(1).toString();
                         String pass = cursor.getString(2).toString();
                         String name = cursor.getString(3).toString();
+//                        String ngaysinh = cursor.getString(4).toString();
 
                         // Gán thông tin đã lấy lên giao diện
                         txtSdt.setText(sdt);
                         edPass.setText(pass);
                         edRePass.setText("");
                         edName.setText(name);
+//                        edNgaySinh.setText(ngaysinh);
 
                         Mess(curSdt);
 
@@ -203,7 +205,7 @@ public class Account extends AppCompatActivity {
     {
 
         // Tạo bản tài khoản
-        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), FullName VARCHAR(100), TrangThai VARCHAR(10))";
+        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), FullName VARCHAR(100), String BirthDay, TrangThai VARCHAR(10))";
         localData.AddData(queryTaoBang);
 
         // Tạo bảng kiểm tra lần đầu khởi động

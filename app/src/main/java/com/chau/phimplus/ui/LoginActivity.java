@@ -144,7 +144,7 @@ public class LoginActivity extends AppCompatActivity {
     public void CreateLocalData()
     {
         // Tạo bản tài khoản
-        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), FullName VARCHAR(100), TrangThai VARCHAR(10))";
+        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), FullName VARCHAR(100), String BirthDay, TrangThai VARCHAR(10))";
         localData.AddData(queryTaoBang);
 
         // Tao bang kiem tra lan khoi dong
