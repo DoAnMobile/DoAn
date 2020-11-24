@@ -1,9 +1,12 @@
 package com.chau.phimplus.ui;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -15,6 +18,8 @@ import com.chau.phimplus.R;
 import com.chau.phimplus.Server.APIserver;
 import com.chau.phimplus.Server.Dataserver;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -25,7 +30,9 @@ public class DangKy extends AppCompatActivity {
 
     Button btnDN1, btnDK;
     ImageButton btnBack;
-    EditText edPhone, edPass, edRePass, edFullName;
+    EditText edPhone, edPass, edRePass, edFullName, edNgaySinh;
+
+    SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,19 +77,34 @@ public class DangKy extends AppCompatActivity {
         edPhone     = (EditText) findViewById(R.id.edtSDT);
         edRePass    = (EditText) findViewById(R.id.edtPasswordAgain);
         edFullName  = (EditText) findViewById(R.id.edtHoTen);
+        edNgaySinh  = (EditText) findViewById(R.id.edNgaySinh_DangKy);
 
     }
 
+    // Hàm khi nhấn nút đăng ký
     public void Register()
     {
+
+        Calendar calendar = Calendar.getInstance();
+        edNgaySinh.setText(format.format(calendar.getTime()));
+
+        edNgaySinh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Picker();
+
+            }
+        });
 
         btnDK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Phone = edPhone.getText().toString();
-                String Pass = edPass.getText().toString();
-                String reMatKhau = edRePass.getText().toString();
-                String FullName = edFullName.getText().toString();
+                String Phone        = edPhone.getText().toString();
+                String Pass         = edPass.getText().toString();
+                String reMatKhau    = edRePass.getText().toString();
+                String FullName     = edFullName.getText().toString();
+                String BirthDay     = edNgaySinh.getText().toString();
 
                 if (Phone.length() > 10)
                 {
@@ -107,7 +129,7 @@ public class DangKy extends AppCompatActivity {
                 else {
 
                     // INSERT DATA
-                    InsertData(Phone, Pass, FullName);
+                    InsertData(Phone, Pass, FullName, BirthDay);
 
                     finish();
 
@@ -118,12 +140,13 @@ public class DangKy extends AppCompatActivity {
 
     }
 
-    public void InsertData(String Phone, String Pass, String FullName){
+    // Đẩy Data lên Server
+    public void InsertData(String Phone, String Pass, String FullName, String BirthDay){
 
         Dataserver dataserver = APIserver.getServer();
         Call<List<TaiKhoan>> callback ;
 
-        callback = dataserver.savePost(Phone, Pass, FullName);
+        callback = dataserver.savePost(Phone, Pass, FullName, BirthDay);
 
         callback.enqueue(new Callback<List<TaiKhoan>>() {
             @Override
@@ -146,6 +169,28 @@ public class DangKy extends AppCompatActivity {
     public void Mess(String text)
     {
         Toast.makeText(getApplicationContext(),text,Toast.LENGTH_SHORT).show();
+    }
+
+    // DatePicker
+    public void Picker()
+    {
+        final Calendar calendar = Calendar.getInstance();
+        final Calendar Now = Calendar.getInstance();
+        int Date = calendar.get(Calendar.DATE);
+        int Month = calendar.get(Calendar.MONTH);
+        int Year = calendar.get(Calendar.YEAR);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+                calendar.set(year, month, dayOfMonth);
+                edNgaySinh.setText(format.format(calendar.getTime()));
+
+            }
+        }, Year, Month, Date);
+
+        datePickerDialog.show();
     }
 
 }

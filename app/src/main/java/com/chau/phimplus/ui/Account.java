@@ -2,10 +2,13 @@ package com.chau.phimplus.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.database.Cursor;
+import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -17,6 +20,8 @@ import com.chau.phimplus.R;
 import com.chau.phimplus.Server.APIserver;
 import com.chau.phimplus.Server.Dataserver;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -33,7 +38,7 @@ public class Account extends AppCompatActivity {
 
     TextView txtSdt;
 
-    EditText edName, edPass, edRePass;
+    EditText edName, edPass, edRePass, edNgaySinh;
 
     String curSdt;
 
@@ -68,6 +73,7 @@ public class Account extends AppCompatActivity {
 
                 String FullName     = edName.getText().toString();
                 String Pass         = edPass.getText().toString();
+                String BirthDay     = edNgaySinh.getText().toString();
                 String reMatKhau    = edRePass.getText().toString();
 
                 if (Pass.equalsIgnoreCase(reMatKhau) == false)
@@ -86,12 +92,21 @@ public class Account extends AppCompatActivity {
                 else {
 
                     // INSERT DATA
-                    UpdateData(curSdt, Pass, FullName);
+                    UpdateData(curSdt, Pass, FullName, BirthDay);
 
                     // UPDATE LOCAL DATA
                     UpdateLocalData(Pass, FullName);
 
                 }
+
+            }
+        });
+
+        edNgaySinh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Picker();
 
             }
         });
@@ -106,6 +121,7 @@ public class Account extends AppCompatActivity {
         edPass      = (EditText) findViewById(R.id.matkhau);
         edRePass    = (EditText) findViewById(R.id.rematkhau);
         btnUpdate   = (Button) findViewById(R.id.btnUpdate);
+        edNgaySinh  = (EditText) findViewById(R.id.edNgaySinh);
 
         localData   = new LocalData(getApplicationContext(),"sttAccount", null, 1);
 
@@ -148,13 +164,14 @@ public class Account extends AppCompatActivity {
 
     }
 
-    public void UpdateData(String Phone, String Pass, String FullName)
+    // Update Server Data
+    public void UpdateData(String Phone, String Pass, String FullName, String BirthDay)
     {
 
         Dataserver dataserver = APIserver.getServer();
         Call<List<TaiKhoan>> callback ;
 
-        callback = dataserver.saveAccount(Phone, Pass, FullName);
+        callback = dataserver.saveAccount(Phone, Pass, BirthDay, FullName);
 
         callback.enqueue(new Callback<List<TaiKhoan>>() {
             @Override
@@ -181,6 +198,7 @@ public class Account extends AppCompatActivity {
         localData.AddData(query);
     }
 
+    // Nhậ biết đã đăng nhập
     public void CreateLocalData()
     {
 
@@ -207,6 +225,27 @@ public class Account extends AppCompatActivity {
     public void Mess(String text)
     {
         Toast.makeText(getApplicationContext(),text,Toast.LENGTH_SHORT).show();
+    }
+
+    // Datepicker
+    public void Picker()
+    {
+        final Calendar calendar = Calendar.getInstance();
+        int Date = calendar.get(Calendar.DATE);
+        int Month = calendar.get(Calendar.MONTH);
+        int Year = calendar.get(Calendar.YEAR);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+                calendar.set(year, month, dayOfMonth);
+                SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+                edNgaySinh.setText(format.format(calendar.getTime()));
+            }
+        }, Year, Month, Date);
+
+        datePickerDialog.show();
     }
 
 }
