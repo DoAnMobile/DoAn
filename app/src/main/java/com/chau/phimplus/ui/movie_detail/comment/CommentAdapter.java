@@ -3,9 +3,11 @@ package com.chau.phimplus.ui.movie_detail.comment;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -22,6 +24,8 @@ import java.util.List;
 public class CommentAdapter
         extends RecyclerView.Adapter<RecyclerViewHolder> {
 
+
+    private AdapterView.OnItemClickListener clickListener;
     ArrayList<Comment> mListCommemt;
     private Context context;
     @NonNull
@@ -35,7 +39,6 @@ public class CommentAdapter
 
         // Return a new holder instance
 
-        commentView.setOnClickListener();
 
         return  new RecyclerViewHolder(commentView);
     }
@@ -46,16 +49,9 @@ public class CommentAdapter
         Comment comment = mListCommemt.get(position);
 
         // Set item views based on your views and data model
-        int username = mListCommemt.get(position).get_userId();
-        holder.txt_userName.setText(Integer.toString(username));
-
-        String content = mListCommemt.get(position).get_content();
+        holder.txt_userName.setText(Integer.toString(comment.get_userId()));
         holder.txt_content.setText(comment.get_content());
-        //holder.imgUser.;
         holder.ratingBar.setRating(comment.get_rating());
-
-
-
 
     }
 

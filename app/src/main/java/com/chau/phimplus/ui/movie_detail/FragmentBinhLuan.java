@@ -1,9 +1,11 @@
 package com.chau.phimplus.ui.movie_detail;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +20,7 @@ import com.chau.phimplus.ui.movie_detail.comment.models.Comment;
 
 import java.util.ArrayList;
 
-public class FragmentBinhLuan extends Fragment {
+public class FragmentBinhLuan extends Fragment implements AdapterView.OnItemClickListener {
 
     // Add RecyclerView member
     private RecyclerView recyclerView;
@@ -36,7 +38,7 @@ public class FragmentBinhLuan extends Fragment {
 
         //Add data
         listComments.add(new Comment(1,1,this.getString(R.string.test_long),1));
-        listComments.add(new Comment(2,1,"Content 2",2));
+        listComments.add(new Comment(2,1,"",2));
         listComments.add(new Comment(3,1,"Content 3",3));
         listComments.add(new Comment(4,1,"Content 4",4));
         listComments.add(new Comment(5,1,"Content 5",5));
@@ -53,7 +55,16 @@ public class FragmentBinhLuan extends Fragment {
         recyclerView.setLayoutManager(llm);
         recyclerView.setAdapter(commentAdapter);
 
+        // Xu ly
+
+
         // finally
         return mRootview;
+    }
+
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
     }
 }
