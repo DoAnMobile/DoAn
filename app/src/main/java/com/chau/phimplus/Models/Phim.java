@@ -21,6 +21,9 @@ public class Phim {
         this.hinhanh = hinhanh;
     }
 
+    public Phim(){
+
+    }
     public Phim(String tenphim, String theloai, int hinhanh, String chitiet) {
         this.tenphim = tenphim;
         this.theloai = theloai;

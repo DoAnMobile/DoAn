@@ -12,6 +12,7 @@ import retrofit2.http.POST;
 
 public interface Dataserver {
 
+	//CALL API Login.php
     @GET("login.php")
     Call<List<TaiKhoan>> getTaiKhoan();
 
