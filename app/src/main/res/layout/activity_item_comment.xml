@@ -40,14 +40,4 @@
         android:inputType="textMultiLine"
         android:textSize="40px" />
 
-    <TextView
-        android:id="@+id/cmt_more"
-        android:layout_width="match_parent"
-        android:layout_height="14dp"
-        android:gravity="right"
-        android:paddingRight="8dp"
-        android:text="More"
-        android:textSize="12dp"
-        android:textStyle="italic" />
-
 </LinearLayout>

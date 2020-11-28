@@ -18,8 +18,7 @@ public class item_comment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_comment);
-        init();
-        fullComment();
+
     }
     private void fullComment() {
 
@@ -57,6 +56,5 @@ public class item_comment extends AppCompatActivity {
 
     private void init() {
         txt_content = findViewById(R.id.cmt_content);
-        txt_more = findViewById(R.id.cmt_more);
     }
 }
