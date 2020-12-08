@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
@@ -14,9 +15,7 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.Navigation;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
@@ -47,6 +46,8 @@ public class HomeFragment extends Fragment implements ItemClick {
     String ctQuaiVat = "Một phi hành gia bị tấn công bởi sinh vật bí ẩn ngoài vũ trụ. Để bảo toàn mạng sống, nhà khoa hoc Tatyana được cử tới với nhiệm vụ cứu chữa và giải đáp sự thật kinh hoàng đang bị che giấu. ";
     String ctCucNo = "Từ kẻ đòi nợ, hai người đàn ông bỗng trở thành gà trống nuôi con sau khi bắt cóc cô con gái của một phụ nữ nhập cư trái phép. Liệu những tình huống nào sẽ xảy đến với gia đình đặc biệt này?";
     String ctTiHon = "Hai trăm năm trước, những yêu tinh vùng Cologne từng giúp đỡ các người thợ trong vùng vào ban đêm. Thế nhưng, sau khi bị một thợ cắt tóc phản bội, họ đã biến mất. Giờ đây, huyền thoại năm xưa xuất hiện trở lại tại một tiệm bánh.";
+    String ctChong = "Chồng Người Ta là một bộ phim tâm lý tình cảm có yếu tố bất ngờ, phim khai thác câu chuyện tình yêu đầy thù hận xoay quanh ba nhân vật Hà,Cường và Trung. Tưởng rằng quá khứ đã chôn vùi, Cường cùng vợ con xây đắp tổ ấm nhỏ hạnh phúc. Nào ngờ, sự xuất hiện của Thắng - người nắm giữbí mật động trời của Cường. Liệu Hà, Cường và Trung có vượt qua được nỗiđau của tình yêu và hận thù?";
+
 
     ImageButton btnAcc, btnDangNhap, btnGioHang;
 
@@ -118,10 +119,11 @@ public class HomeFragment extends Fragment implements ItemClick {
         dsPhim.add(new Phim("Quái Vật Săn Đêm", "Kinh dị", R.drawable.quai_vat_san_dem, ctQuaiVat));
         dsPhim.add(new Phim("Cục Nợ Hóa Cục Vàng", "Tình cảm", R.drawable.cu_no_hoa_cuc_cung, ctCucNo));
         dsPhim.add(new Phim("Tí Hon Hậu Đậu", "Hoạt hình", R.drawable.ti_hon_hau_dau, ctTiHon));
+        dsPhim.add(new Phim("Chồng người ta", "Tâm Lý, 18+", R.drawable.chong_nguoi_ta, ctChong));
 
         MovieAdapter movieAdapter = new MovieAdapter(getContext(), dsPhim, this);
         MoviesDangChieuRV.setAdapter(movieAdapter);
-        MoviesDangChieuRV.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        MoviesDangChieuRV.setLayoutManager(new GridLayoutManager(getContext(), 3));
 
     }
 
@@ -129,6 +131,7 @@ public class HomeFragment extends Fragment implements ItemClick {
     {
 
         List<Phim> dsPhim = new ArrayList<>();
+        dsPhim.add(new Phim("Chồng người ta", "Tâm Lý, 18+", R.drawable.chong_nguoi_ta, ctChong));
         dsPhim.add(new Phim("Cục Nợ Hóa Cục Vàng", "Tình cảm", R.drawable.cu_no_hoa_cuc_cung, ctCucNo));
         dsPhim.add(new Phim("Tí Hon Hậu Đậu", "Hoạt hình, 18+", R.drawable.ti_hon_hau_dau, ctTiHon));
         dsPhim.add(new Phim("Đại Dịch Xác Sống", "Kinh dị", R.drawable.dai_dich_xac_song, ctDaiDichXacSong));
@@ -137,7 +140,7 @@ public class HomeFragment extends Fragment implements ItemClick {
 
         MovieAdapter movieAdapter = new MovieAdapter(getContext(), dsPhim, this);
         MoviesSapChieuRV.setAdapter(movieAdapter);
-        MoviesSapChieuRV.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        MoviesSapChieuRV.setLayoutManager(new GridLayoutManager(getContext(), 3));
 
     }
 

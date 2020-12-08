@@ -2,6 +2,7 @@ package com.chau.phimplus.Server;
 
 import com.chau.phimplus.Models.TaiKhoan;
 
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -20,7 +21,18 @@ public interface Dataserver {
     @FormUrlEncoded
     Call<List<TaiKhoan>> savePost(
             @Field("Phone") String Phone,
-            @Field("Password") String Password
+            @Field("Password") String Password,
+            @Field("FullName") String FullName,
+            @Field("BirthDay") String BirthDay
+    );
+
+    @POST("update-account.php")
+    @FormUrlEncoded
+    Call<List<TaiKhoan>> saveAccount(
+            @Field("Phone") String Phone,
+            @Field("Password") String Password,
+            @Field("BirthDay") String BirthDay,
+            @Field("FullName") String FullName
     );
 
 }

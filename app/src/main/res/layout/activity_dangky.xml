@@ -52,12 +52,32 @@
             />
 
         <EditText
+            android:id="@+id/edtSDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Số điện thoại"
+            android:inputType="phone"
+            android:textSize="18sp" />
+
+        <EditText
             android:hint="Họ và tên"
             android:id="@+id/edtHoTen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:textSize="18sp"
              />
+
+        <EditText
+            android:hint="Ngày sinh"
+            android:id="@+id/edNgaySinh_DangKy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:inputType="date"
+            />
 
         <EditText
             android:hint="Mật khẩu"
@@ -76,15 +96,6 @@
             android:textSize="18sp"
             android:inputType="textPassword" />
 
-        <EditText
-            android:hint="Số điện thoại"
-            android:layout_marginTop="10dp"
-            android:id="@+id/edtSDT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:inputType="phone" />
-
         <Button
             android:id="@+id/btnDangKy1"
             android:layout_width="match_parent"
@@ -95,6 +106,7 @@
             android:textColor="#fff"
             android:background="@color/colorOrange"
             />
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -122,6 +134,7 @@
                 android:background="@color/colorOrange"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
+                android:layout_marginTop="10dp"
                 android:textColor="#fff"
                 android:textSize="18sp" />
         </RelativeLayout>

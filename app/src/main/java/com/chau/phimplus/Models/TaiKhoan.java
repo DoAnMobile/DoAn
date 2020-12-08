@@ -11,6 +11,9 @@ public class TaiKhoan {
     @SerializedName("Password")
     @Expose
     private String password;
+    @SerializedName("FullName")
+    @Expose
+    private Object fullName;
     @SerializedName("Status")
     @Expose
     private String status;
@@ -29,6 +32,14 @@ public class TaiKhoan {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Object getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(Object fullName) {
+        this.fullName = fullName;
     }
 
     public String getStatus() {

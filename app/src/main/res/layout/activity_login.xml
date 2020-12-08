@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:textSize="18sp"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:inputType="phone"
             />
 
         <EditText

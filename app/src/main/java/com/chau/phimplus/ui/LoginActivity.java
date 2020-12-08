@@ -42,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
 
         AnhXa();
 
+        CreateLocalData();
+
         XuLy();
 
     }
@@ -68,9 +70,10 @@ public class LoginActivity extends AppCompatActivity {
 
                         String phone = taikhoans.get(i).getPhone().toString();
                         String password  = taikhoans.get(i).getPassword().toString();
+                        String name = taikhoans.get(i).getFullName().toString();
                         String stt = taikhoans.get(i).getStatus().toString();
 
-                        InsertAccountLocal(phone, password, "true");
+                        InsertAccountLocal(phone, password, name, "true");
 
                         CreateFirstLogin();
 
@@ -139,23 +142,15 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     // Local data
-
     public void CreateLocalData()
     {
-        // Tao bang tai khoan
-        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), TrangThai VARCHAR(10))";
+        // Tạo bản tài khoản
+        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), FullName VARCHAR(100), String BirthDay, TrangThai VARCHAR(10))";
         localData.AddData(queryTaoBang);
 
         // Tao bang kiem tra lan khoi dong
         String queryTaoBangCheck = "Create Table if not exists CheckLogin (ID Integer Primary Key, Stt VARCHAR(10))";
         localData.AddData(queryTaoBangCheck);
-    }
-
-    private void Logout(String curTaiKhoan) {
-
-        String queryLogout = "Update TaiKhoan Set TrangThai = 'false' Where TaiKhoan = '" + curTaiKhoan + "'";
-        localData.AddData(queryLogout);
-
     }
 
     public Cursor GetLocalData(String queryLayTaiKhoan)
@@ -164,9 +159,9 @@ public class LoginActivity extends AppCompatActivity {
         return cursor;
     }
 
-    public void InsertAccountLocal(String phone, String pass, String stt)
+    public void InsertAccountLocal(String phone, String pass, String name, String stt)
     {
-        String queryTaoTaiKhoan = "Insert Into TaiKhoan values (null, '" + phone + "',  '" + pass + "', '" + stt + "')";
+        String queryTaoTaiKhoan = "Insert Into TaiKhoan values (null, '" + phone + "',  '" + pass + "', '" + name + "','" + stt + "')";
         localData.AddData(queryTaoTaiKhoan);
     }
 

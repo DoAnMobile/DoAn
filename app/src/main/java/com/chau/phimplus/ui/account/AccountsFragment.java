@@ -126,13 +126,11 @@ public class AccountsFragment extends Fragment {
         chucNang.add("Vé đã mua");
         chucNang.add("Giỏ hàng");
         chucNang.add("Yêu thích");
-        chucNang.add("Cài đặt tài khoản");
         chucNang.add("Cài đặt ứng dụng");
 
         iconRow.add(R.drawable.ic_tickets);
         iconRow.add(R.drawable.ic_cart);
         iconRow.add(R.drawable.ic_heart);
-        iconRow.add(R.drawable.ic_account_setting_02);
         iconRow.add(R.drawable.ic_app_setting);
 
         myAdapter adapter = new myAdapter(getContext(), chucNang, iconRow);
@@ -190,7 +188,7 @@ public class AccountsFragment extends Fragment {
     {
 
         // Tạo bản tài khoản
-        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), TrangThai VARCHAR(10))";
+        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), FullName VARCHAR(100), TrangThai VARCHAR(10))";
         localData.AddData(queryTaoBang);
 
         // Tạo bảng kiểm tra lần đầu khởi động
@@ -231,17 +229,20 @@ public class AccountsFragment extends Fragment {
                 Cursor cursor = GetLocalData(queryLayTaiKhoan);
                 while (cursor.moveToNext())
                 {
-                    if (cursor.getString(3).trim().equalsIgnoreCase("true"))
+                    if (cursor.getString(4).trim().equalsIgnoreCase("true"))
                     {
                         // Lấy tên tài khoản
                         curTaiKhoan = cursor.getString(1);
 
                         // Nếu đã đăng nhập thì tắt nút ĐĂNG NHẬP
-                        String nameAcc = cursor.getString(1);
+                        String fullName = cursor.getString(3);
                         btnLogin.setVisibility(View.INVISIBLE);
-                        txtAccountName.setText(nameAcc);
+                        txtAccountName.setText(fullName);
                         txtAccountName.setVisibility(View.VISIBLE);
 
+                        // Nếu đã đăng nhập thì hiện chức năng sửa tài khoản
+                        chucNang.add("Cài đặt tài khoản");
+                        iconRow.add(R.drawable.ic_account_setting_02);
                         // Nếu đã đăng nhập thì hiện chức năng ĐĂNG XUẤT
                         chucNang.add("Đăng xuất");
                         iconRow.add(R.drawable.ic_logout_02);

@@ -2,15 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="125dp"
+    android:layout_width="115dp"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/custom_item_phim"
     >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="1dp"
+        >
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="165dp"
         android:id="@+id/imageView"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_foreground"
@@ -22,6 +29,9 @@
         android:text="title"
         android:textSize="16sp"
         android:id="@+id/item_movie_title"
+        android:textColor="#fff"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
         />
 
     <TextView
@@ -29,8 +39,13 @@
         android:layout_height="wrap_content"
         android:text="theloai"
         android:textSize="14sp"
-        android:textColor="#013AAC"
+        android:textColor="#8CB3FF"
         android:id="@+id/item_movie_theloai"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
         />
+
+    </LinearLayout>
 
 </LinearLayout>
