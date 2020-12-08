@@ -16,7 +16,7 @@ public class APIRetrofitClient {
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient (String base_url){
-
+		//Re-connect
         OkHttpClient okHttpClient = new OkHttpClient.Builder().readTimeout(10000, TimeUnit.MILLISECONDS)
                                                                 .writeTimeout(10000, TimeUnit.MILLISECONDS)
                                                                 .connectTimeout(10000, TimeUnit.MILLISECONDS)

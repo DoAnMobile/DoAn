@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         callback.enqueue(new Callback<List<TaiKhoan>>() {
             @Override
             public void onResponse(Call<List<TaiKhoan>> call, Response<List<TaiKhoan>> response) {
+                //Get all
                 ArrayList<TaiKhoan> taikhoans = (ArrayList<TaiKhoan>) response.body();
 
                 Integer dem = 0;

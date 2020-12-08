@@ -50,12 +50,12 @@ public class ChiTietphim extends AppCompatActivity {
 
     private void AnhXa() {
 
-        imageView = findViewById(R.id.img_chi_tiet_phim);
-        txtTitle = (TextView) findViewById(R.id.txt_title);
-        txtDetail = findViewById(R.id.detail_movie);
+        imageView = findViewById(R.id.movie_detail_img);
+        txtTitle = (TextView) findViewById(R.id.movie_detail_txt_title);
+        txtDetail = findViewById(R.id.movie_detail_content);
         txtTheLoai = (TextView) findViewById(R.id.txtTheLoai);
         btnMuaVe = (Button) findViewById(R.id.btnMuaVe);
-        btnBack = (ImageButton) findViewById(R.id.btn_chitiet_back);
+        //btnBack = (ImageButton) findViewById(R.id.btn_chitiet_back);
 
     }
 

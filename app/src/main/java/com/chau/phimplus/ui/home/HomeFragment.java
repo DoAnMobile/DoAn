@@ -1,7 +1,9 @@
 package com.chau.phimplus.ui.home;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,15 +15,21 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.chau.phimplus.ui.ChiTietphim;
 import com.chau.phimplus.Models.ItemClick;
 import com.chau.phimplus.Models.MovieAdapter;
 import com.chau.phimplus.Models.Phim;
 import com.chau.phimplus.R;
+import com.chau.phimplus.ui.movie_detail.FragmentBinhLuan;
+import com.chau.phimplus.ui.movie_detail.FragmentThongTin;
+import com.chau.phimplus.ui.movie_detail.MainActivity_MovieDetail;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +37,7 @@ import java.util.List;
 public class HomeFragment extends Fragment implements ItemClick {
 
     RecyclerView MoviesSapChieuRV, MoviesDangChieuRV;
+
 
     ViewFlipper slideVF;
 
@@ -43,13 +52,19 @@ public class HomeFragment extends Fragment implements ItemClick {
     ImageButton btnAcc, btnDangNhap, btnGioHang;
 
     private HomeViewModel homeViewModel;
+    public static Phim phimClicked = new Phim();
+    View mRootView;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         //setHasOptionsMenu(true);
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        mRootView = inflater.inflate(R.layout.fragment_home, container, false);
 
+
+
+        return mRootView;
     }
+
 
 
 
@@ -78,7 +93,6 @@ public class HomeFragment extends Fragment implements ItemClick {
         slideVF = (ViewFlipper) view.findViewById(R.id.slideShow);
         MoviesDangChieuRV = view.findViewById(R.id.RvPhimDangChieu);
         MoviesSapChieuRV = view.findViewById(R.id.RvPhimSapChieu);
-
     }
 
     private void SlideShow(int image)
@@ -134,14 +148,27 @@ public class HomeFragment extends Fragment implements ItemClick {
     public void onPhimClick(Phim phim, ImageView phimImageView)
     {
 
-        Intent intent = new Intent(getContext(), ChiTietphim.class);
-        intent.putExtra("title", phim.getTenphim());
-        intent.putExtra("imgURL", phim.getHinhanh());
-        intent.putExtra("detail", phim.getChitiet());
-        intent.putExtra("theloai", phim.getTheloai());
+//        Intent intent = new Intent(getActivity(), MainActivity_MovieDetail.class);
+
+        phimClicked.setTenphim(phim.getTenphim());
+        phimClicked.setHinhanh(phim.getHinhanh());
+        phimClicked.setChitiet(phim.getChitiet());
+        phimClicked.setTheloai(phim.getTheloai());
+
         //
-        //ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity(), phimImageView, "sharedName");
+//        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity(), phimImageView, "sharedName");
+//        FragmentThongTin fragmentThongTin = new FragmentThongTin();
+//        FragmentBinhLuan fragmentBinhLuan = new FragmentBinhLuan();
+//        FragmentManager fragmentManager = getParentFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.nav_host_fragment,fragmentThongTin);
+//
+//        fragmentTransaction.commit();
+        //startActivity(intent);
+
+        Intent intent= new Intent(getActivity(), MainActivity_MovieDetail.class);
         startActivity(intent);
+
 
     }
 }

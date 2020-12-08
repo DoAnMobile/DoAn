@@ -20,7 +20,7 @@
         android:layout_height="165dp"
         android:id="@+id/imageView"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/ic_launcher_foreground"
         />
 
     <TextView
