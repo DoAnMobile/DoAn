@@ -39,6 +39,10 @@ public class FragmentBinhLuan extends Fragment implements CommentAdapter.OnComme
         // Add the following lines to create RecyclerView
         recyclerView = (RecyclerView) mRootview.findViewById(R.id.recylerview_comment);
         recyclerView.setHasFixedSize(true);
+<<<<<<< Updated upstream
+=======
+        recyclerView.setItemViewCacheSize(20);
+>>>>>>> Stashed changes
         recyclerView.setLayoutManager(new LinearLayoutManager(mRootview.getContext()));
 
         //Add data
@@ -48,6 +52,21 @@ public class FragmentBinhLuan extends Fragment implements CommentAdapter.OnComme
         listComments.add(new Comment(4,1,"Content 4",4));
         listComments.add(new Comment(5,1,"Content 5",5));
         listComments.add(new Comment(6,1,"Content 6",1));
+<<<<<<< Updated upstream
+=======
+        listComments.add(new Comment(1,1,this.getString(R.string.test_long),1));
+        listComments.add(new Comment(2,1,"",2));
+        listComments.add(new Comment(3,1,"Content 3",3));
+        listComments.add(new Comment(4,1,"Content 4",4));
+        listComments.add(new Comment(5,1,"Content 5",5));
+        listComments.add(new Comment(6,1,"Content 6",1));
+        listComments.add(new Comment(1,1,this.getString(R.string.test_long),1));
+        listComments.add(new Comment(2,1,"",2));
+        listComments.add(new Comment(3,1,"Content 3",3));
+        listComments.add(new Comment(4,1,"Content 4",4));
+        listComments.add(new Comment(5,1,"Content 5",5));
+        listComments.add(new Comment(6,1,"Content 6",1));
+>>>>>>> Stashed changes
 
         // Create adapter passing in the sample user data
         CommentAdapter commentAdapter = new CommentAdapter(getContext(),listComments,this);

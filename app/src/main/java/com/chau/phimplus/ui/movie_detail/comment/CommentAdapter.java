@@ -92,6 +92,7 @@ public class CommentAdapter
 
         OnCommentListener onCommentListener;
 
+<<<<<<< Updated upstream
             public ImageView imgUser;
             public TextView txt_userName,txt_content;
             public RatingBar ratingBar;
@@ -113,6 +114,29 @@ public class CommentAdapter
         public void onClick(View v) {
                 onCommentListener.OnCommentClick(getAdapterPosition());
                 RecyclerViewHolder recyclerViewHolder = new RecyclerViewHolder(v,onCommentListener);
+=======
+        public ImageView imgUser;
+        public TextView txt_userName,txt_content;
+        public RatingBar ratingBar;
+        public RecyclerViewHolder(final View itemView, OnCommentListener onCommentListener){
+            super(itemView);
+
+            imgUser = (ImageView)itemView.findViewById(R.id.cmt_img_user);
+            ratingBar = (RatingBar)itemView.findViewById(R.id.cmt_rating);
+            txt_userName = (TextView)itemView.findViewById(R.id.cmt_username);
+            txt_content = (TextView)itemView.findViewById(R.id.cmt_content);
+            this.onCommentListener = onCommentListener;
+
+            //Click
+            txt_content.setOnClickListener(this);
+
+        }
+
+        @Override
+        public void onClick(View v) {
+            onCommentListener.OnCommentClick(getAdapterPosition());
+            RecyclerViewHolder recyclerViewHolder = new RecyclerViewHolder(v,onCommentListener);
+>>>>>>> Stashed changes
 
             if(recyclerViewHolder.txt_content.getHeight()>100){
                 Log.d("fff", ">100: ");
@@ -120,9 +144,15 @@ public class CommentAdapter
                 recyclerViewHolder.txt_content.setLayoutParams(size);
             }else if(recyclerViewHolder.txt_content.getLineCount()>1 && recyclerViewHolder.txt_content.getHeight()!=ViewGroup.LayoutParams.WRAP_CONTENT){
 
+<<<<<<< Updated upstream
                     Log.d("fff", "onClick: "+ Integer.toString(recyclerViewHolder.txt_content.getHeight()));
                     LinearLayout.LayoutParams  size = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
                     recyclerViewHolder.txt_content.setLayoutParams(size);
+=======
+                Log.d("fff", "onClick: "+ Integer.toString(recyclerViewHolder.txt_content.getHeight()));
+                LinearLayout.LayoutParams  size = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+                recyclerViewHolder.txt_content.setLayoutParams(size);
+>>>>>>> Stashed changes
             }
 
 

@@ -18,7 +18,12 @@ public class item_comment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_comment);
+<<<<<<< Updated upstream
 
+=======
+        init();
+        fullComment();
+>>>>>>> Stashed changes
     }
     private void fullComment() {
 

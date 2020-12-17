@@ -30,7 +30,18 @@
     <RatingBar
         android:id="@+id/cmt_rating"
         android:layout_width="wrap_content"
+<<<<<<< Updated upstream
         android:layout_height="wrap_content"
+=======
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:max="5"
+        android:stepSize="1"
+>>>>>>> Stashed changes
         android:isIndicator="true" />
 
     <TextView
