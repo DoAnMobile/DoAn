@@ -25,10 +25,14 @@ public class FragmentLichChieu extends Fragment implements View.OnClickListener 
     String arrBranch[];
     private View mRootView;
     Spinner spinner_branch;
+<<<<<<< Updated upstream
     Button btn_test;
     private LinearLayout MasterLayout;
     private LinearLayout ShowtimeLayout;
     EditText editText_test;
+=======
+    private LinearLayout MasterLayout;
+>>>>>>> Stashed changes
 
     @Nullable
     @Override
@@ -42,9 +46,13 @@ public class FragmentLichChieu extends Fragment implements View.OnClickListener 
         anhXa();
         setData();
         loadSpinerBranch();
+<<<<<<< Updated upstream
         //
 
         btn_test.setOnClickListener(this);
+=======
+
+>>>>>>> Stashed changes
         //
         return mRootView;
     }
@@ -92,11 +100,15 @@ public class FragmentLichChieu extends Fragment implements View.OnClickListener 
     private void anhXa() {
         spinner_branch = (Spinner)mRootView.findViewById(R.id.spi_branch);
         //
+<<<<<<< Updated upstream
         btn_test = (Button)mRootView.findViewById(R.id.btn_test);
         //
         MasterLayout = (LinearLayout) mRootView.findViewById(R.id.linearLayoutMainShowPaln);
         //
         editText_test = (EditText)mRootView.findViewById(R.id.edit_test);
+=======
+        MasterLayout = (LinearLayout) mRootView.findViewById(R.id.linearLayoutMainShowPaln);
+>>>>>>> Stashed changes
 
     }
     private Spinner addList (Spinner spinner){
@@ -112,6 +124,7 @@ public class FragmentLichChieu extends Fragment implements View.OnClickListener 
     @Override
     public void onClick(View v) {
 
+<<<<<<< Updated upstream
         switch (v.getId()) {
             case R.id.btn_test: {
 //                Integer subLayoutID = 1;
@@ -120,6 +133,9 @@ public class FragmentLichChieu extends Fragment implements View.OnClickListener 
 
             }
         }
+=======
+
+>>>>>>> Stashed changes
     }
 
 }

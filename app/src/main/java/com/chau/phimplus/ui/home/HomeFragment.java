@@ -15,8 +15,14 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+<<<<<<< Updated upstream
 
 import androidx.recyclerview.widget.GridLayoutManager;
+=======
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
+>>>>>>> Stashed changes
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
@@ -61,8 +67,13 @@ public class HomeFragment extends Fragment implements ItemClick {
         //setHasOptionsMenu(true);
         mRootView = inflater.inflate(R.layout.fragment_home, container, false);
 
+<<<<<<< Updated upstream
 
 
+=======
+
+
+>>>>>>> Stashed changes
         return mRootView;
     }
 

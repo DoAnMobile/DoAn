@@ -25,6 +25,19 @@
             android:scaleType="centerCrop"
             android:src="@drawable/tiec_trang_mau"
             android:transitionName="sharedName" />
+<<<<<<< Updated upstream
+=======
+        <ImageView
+            android:id="@+id/movie_trailer_img"
+            android:layout_width="125dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/movie_detail_img"
+            android:src="@drawable/icon_trailer" />
+
+>>>>>>> Stashed changes
 
         <TextView
             android:id="@+id/movie_detail_txt_title"
