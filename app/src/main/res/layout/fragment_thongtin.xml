@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_hinh_hen"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hinh_nen_2" />
+
+        <ImageView
+            android:id="@+id/movie_detail_img"
+            android:layout_width="125dp"
+            android:layout_height="175dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tiec_trang_mau"
+            android:transitionName="sharedName" />
+        <ImageView
+            android:id="@+id/movie_trailer_img"
+            android:layout_width="125dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/movie_detail_img"
+            android:src="@drawable/icon_trailer" />
+
+
+        <TextView
+            android:id="@+id/movie_detail_txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_hinh_hen"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/movie_detail_img"
+            android:text="Tiệc Trăng Máu"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="22sp"
+
+            />
+
+        <TextView
+            android:id="@+id/txtTheLoai2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_detail_txt_title"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/txt34"
+            android:text="Nguyễn Quang Dũng"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_detail_txt_title"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/movie_detail_img"
+            android:text="Đạo diễn: "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_detail_txt_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="149dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="23dp"
+            android:layout_toRightOf="@+id/movie_detail_img"
+            android:text="Thể loại: "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtTheLoai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_detail_txt_title"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="23dp"
+            android:layout_toRightOf="@+id/txt34"
+            android:text="18+"
+            android:textSize="14sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_above="@+id/btnMuaVe"
+            android:layout_below="@+id/txtTheLoai"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignEnd="@+id/btnMuaVe"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/movie_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/movie_context_demo_long" />
+
+            </LinearLayout>
+        </ScrollView>
+        <Button
+            android:id="@+id/btnMuaVe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_btn"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Mua Vé"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
