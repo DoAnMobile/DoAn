@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Phim Plus</string>
-    <string name="title_home">Trang Chủ</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_accounts">Tài Khoản</string>
-    <string name="text_setting_accounts">Cài đặt tài khoản</string>
-
-</resources>
