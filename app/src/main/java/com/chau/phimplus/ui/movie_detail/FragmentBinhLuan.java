@@ -16,12 +16,23 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chau.phimplus.R;
+
+import com.chau.phimplus.Server.APIserver;
+import com.chau.phimplus.Server.Dataserver;
+
 import com.chau.phimplus.ui.movie_detail.comment.CommentAdapter;
 import com.chau.phimplus.ui.movie_detail.comment.models.Comment;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class FragmentBinhLuan extends Fragment implements CommentAdapter.OnCommentListener {
 
@@ -41,6 +52,9 @@ public class FragmentBinhLuan extends Fragment implements CommentAdapter.OnComme
         recyclerView.setHasFixedSize(true);
         recyclerView.setItemViewCacheSize(20);
         recyclerView.setLayoutManager(new LinearLayoutManager(mRootview.getContext()));
+
+
+        getComment(2);
 
         //Add data
         listComments.add(new Comment(1,1,this.getString(R.string.test_long),1));
@@ -81,6 +95,28 @@ public class FragmentBinhLuan extends Fragment implements CommentAdapter.OnComme
     public void OnCommentClick(int position) {
 //        listComments.get(position);
 
+    }
+
+
+    public ArrayList<Comment> getComment(int movieId){
+
+        Dataserver dataserver = APIserver.getServer();
+        Call<ArrayList<Comment>> callback = dataserver.getComment("2");
+        callback.enqueue(new Callback<ArrayList<Comment>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Comment>> call, Response<ArrayList<Comment>> response) {
+                Log.d("fff", "onResponse: "+response.body().size());
+                listComments = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Comment>> call, Throwable t) {
+
+            }
+        });
+
+
+        return null;
     }
 
 }

@@ -1,52 +1,75 @@
 package com.chau.phimplus.ui.movie_detail.comment.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Comment {
 
+    @SerializedName("MovieId")
+    @Expose
+    private String movieId;
+    @SerializedName("Rate")
+    @Expose
+    private int rate;
+    @SerializedName("Content")
+    @Expose
+    private String content;
+    @SerializedName("Status")
+    @Expose
+    private Object status;
+    @SerializedName("FisrtName")
+    @Expose
+    private Object fisrtName;
+    @SerializedName("LastName")
+    @Expose
+    private String lastName;
 
-    private int _userId;
-    private int _movieId;
-    private String _content;
-    private int _rating;
-
-    public int get_rating() {
-        return _rating;
+    public String getMovieId() {
+        return movieId;
     }
 
-    public void set_rating(int _rating) {
-        this._rating = _rating;
+    public void setMovieId(String movieId) {
+        this.movieId = movieId;
     }
 
-    public Comment() {
+    public int getRate() {
+        return rate;
     }
 
-    public Comment(int _userId, int _movieId, String _content,int _rating) {
-        this._userId = _userId;
-        this._movieId = _movieId;
-        this._content = _content;
-        this._rating = _rating;
+    public void setRate(int rate) {
+        this.rate = rate;
     }
 
-    public int get_userId() {
-        return _userId;
+    public String getContent() {
+        return content;
     }
 
-    public int get_movieId() {
-        return _movieId;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String get_content() {
-        return _content;
+    public Object getStatus() {
+        return status;
     }
 
-    public void set_userId(int _userId) {
-        this._userId = _userId;
+    public void setStatus(Object status) {
+        this.status = status;
     }
 
-    public void set_movieId(int _movieId) {
-        this._movieId = _movieId;
+    public Object getFisrtName() {
+        return fisrtName;
     }
 
-    public void set_content(String _content) {
-        this._content = _content;
+    public void setFisrtName(Object fisrtName) {
+        this.fisrtName = fisrtName;
     }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
 }

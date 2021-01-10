@@ -56,6 +56,15 @@ public class CommentAdapter
         Comment comment = mListCommemt.get(position);
 
         // Set item views based on your views and data model
+
+        String username = mListCommemt.get(position).getFisrtName()+" "+mListCommemt.get(position).getLastName();
+        holder.txt_userName.setText(username);
+
+        String content = mListCommemt.get(position).getContent();
+        holder.txt_content.setText(comment.getContent());
+        //holder.imgUser.;
+        holder.ratingBar.setRating(comment.getRate());
+
         int username = mListCommemt.get(position).get_userId();
         holder.txt_userName.setText(Integer.toString(username));
 
@@ -64,11 +73,12 @@ public class CommentAdapter
         //holder.imgUser.;
         holder.ratingBar.setRating(comment.get_rating());
 
+
         // Init
         init(holder);
 
         try{
-            Log.d("fff", "onBindViewHolder: " + Integer.toString(holder.txt_content.getLineCount()));
+
             if(holder.txt_content.getText().toString().equals("")){
                 LinearLayout.LayoutParams  size = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1);
                 holder.txt_content.setLayoutParams(size);

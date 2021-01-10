@@ -67,11 +67,6 @@ public class FragmentThongTin extends Fragment {
         theloai = thisMovie.getTheloai();
         img = thisMovie.getHinhanh();
 
-
-        Log.d("fff",Integer.toString(img));
-        Log.d("fff",title);
-        Log.d("fff",detail);
-
         Glide.with(this).load(img).into(imageView);
         imageView.setImageResource(img);
         txtTitle.setText(title);

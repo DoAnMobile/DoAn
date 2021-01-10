@@ -86,8 +86,6 @@ public class FragmentLichChieu extends Fragment implements View.OnClickListener 
 
     private void anhXa() {
         spinner_branch = (Spinner)mRootView.findViewById(R.id.spi_branch);
-        //
-        MasterLayout = (LinearLayout) mRootView.findViewById(R.id.linearLayoutMainShowPaln);
 
     }
     private Spinner addList (Spinner spinner){
