@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Phim Plus</string>
+    <string name="title_home">Trang Chủ</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_accounts">Tài Khoản</string>
+    <string name="text_setting_accounts">Cài đặt tài khoản</string>
+
+
+    <string name="tab_text_1">Thông Tin</string>
+    <string name="tab_text_2">Lịch Chiếu</string>
+    <string name="tab_text_3">Bình Luận</string>
+    <!-- -->
+    <string name="movie_context_ttm">"Tiệc trăng máu" là bộ phim xoay quanh một bữa tiệc "đẫm máu" của nhóm bạn chơi thân 40 năm với nhau. Bữa tiệc tân gia diễn ra vui vẻ cho tới khi Nguyệt Ánh (Hồng Ánh đóng) đề nghị tất cả chơi một trò chơi công khai những tin nhắn và điện thoại gọi tới.</string>
+    <string name="movie_context_demo_long">Lật mặt: Nhà có khách là phần thứ tư trong loạt phim Lật mặt của Lý Hải nhưng có nội dung độc lập. Phim xoay quanh một nhóm bạn chuyên chụp ảnh cưới gồm Thông (Huy Khánh), Phương (Mạc Văn Khoa), Bình (Hoàng Mèo), Lật mặt: Nhà có khách là phần thứ tư trong loạt phim Lật mặt của Lý Hải nhưng có nội dung độc lập. Phim xoay quanh một nhóm bạn chuyên chụp ảnh cưới gồm Thông (Huy Khánh), Phương (Mạc Văn Khoa), Bình (Hoàng Mèo), Vy (Katleen Phan Võ) và người yêu cô gái là Huân (Jay Quân).Lật mặt: Nhà có khách là phần thứ tư trong loạt phim Lật mặt của Lý Hải nhưng có nội dung độc lập. Phim xoay quanh một nhóm bạn chuyên chụp ảnh cưới gồm Thông (Huy Khánh), Phương (Mạc Văn Khoa), Bình (Hoàng Mèo), Vy (Katleen Phan Võ) và người yêu cô gái là Huân (Jay Quân).Vy (Katleen Phan Võ) và người yêu cô gái là Huân (Jay Quân).</string>
+    <!-- list branch -->
+    <string-array name="list_breanch">
+        <item>Lê Thánh Tôn</item>
+        <item>Bình Long</item>
+        <item>Trung Sơn</item>
+    </string-array>
+    <!-- big name-->
+    <string name="title_branch">Chi Nhánh</string>
+
+</resources>
