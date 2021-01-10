@@ -1,0 +1,294 @@
+[
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_back.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_slide_2.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\slide_2.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_movie_detail_main.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\fragment_movie_detail_main.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_item.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_item.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_account.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\fragment_account.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_in.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\anim\\slide_in.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_dangky.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_dangky.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_lichchieu.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\item_lichchieu.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_account.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable\\ic_account.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_app_setting.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_app_setting.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_logout.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_logout.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_row_list_account.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_row_list_account.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_logout_02.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_logout_02.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cu_no_hoa_cuc_cung.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable\\cu_no_hoa_cuc_cung.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_out.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\anim\\slide_out.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_item_comment.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_item_comment.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_account_02.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_account_02.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_slide_1.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\slide_1.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_btn_muave.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable\\custom_btn_muave.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_account.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_account.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_tiec_trang_mau.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\tiec_trang_mau.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_account_setting_01.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_account_setting_01.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_add_avt_02.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_add_avt_02.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_heart.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_heart.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_movie_detail_main.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_movie_detail_main.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_cu_no_hoa_cuc_cung.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\cu_no_hoa_cuc_cung.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_trailer.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\dialog_trailer.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_lichchieu.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\fragment_lichchieu.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_app_settings_01.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_app_settings_01.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_cart.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_cart.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ti_hon_hau_dau.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ti_hon_hau_dau.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_btn.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable\\custom_btn.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_add_avt.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_add_avt.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_hinh_nen_2.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\hinh_nen_2.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_account_setting_02.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_account_setting_02.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_dai_dich_xac_song.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\dai_dich_xac_song.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_quai_vat_san_dem.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\quai_vat_san_dem.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_giohang.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_giohang.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_chi_tietphim.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_chi_tietphim.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_hinh_nen.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\hinh_nen.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_thongtin.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\fragment_thongtin.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_back_02.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_back_02.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_slide_3.jpg.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\slide_3.jpg"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_tickets.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_tickets.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_binhluan.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\fragment_binhluan.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_trailer.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable\\icon_trailer.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Subjects\\Do an\\Android\\DoAn\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
+    }
+]
