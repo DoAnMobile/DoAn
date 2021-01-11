@@ -26,19 +26,4 @@
             android:textSize="24dp"/>
     </LinearLayout>
 
-
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#00F82D2D">
-    <Button
-        android:id="@+id/icon_lichchieu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="12:12"
-        android:textSize="24dp"
-        android:background="#8026B1AD"
-        android:textColor="#FFFFFFFF"
-        />
-
 </LinearLayout>
