@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     LocalData localData;
 
-    EditText dienthoai, matkhau;
+    EditText edPhone, edPass;
 
     Button btnDK1, btnDN1;
 
@@ -41,6 +41,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         AnhXa();
+
+        CreateLocalData();
 
         XuLy();
 
@@ -61,18 +63,20 @@ public class LoginActivity extends AppCompatActivity {
 
                 for(int i = 0; i < taikhoans.size(); i++)
                 {
-                    if(dienthoai.getText().toString().equalsIgnoreCase(taikhoans.get(i).getPhone().toString()) == true
-                            && matkhau.getText().toString().equalsIgnoreCase(taikhoans.get(i).getPassword().toString()) == true)
+                    if(edPhone.getText().toString().equalsIgnoreCase(taikhoans.get(i).getPhone().toString()) == true
+                            && edPass.getText().toString().equalsIgnoreCase(taikhoans.get(i).getPassword().toString()) == true)
                     {
                         dem++;
 
                         String phone = taikhoans.get(i).getPhone().toString();
                         String password  = taikhoans.get(i).getPassword().toString();
-                        String stt = taikhoans.get(i).getStatus().toString();
+                        String name = taikhoans.get(i).getFisrtName().toString() + " " + taikhoans.get(i).getLastName().toString();
 
-                        InsertAccountLocal(phone, password, "true");
+                        InsertAccountLocal(name, phone, password, "true");
 
                         CreateFirstLogin();
+
+                        Mess("Thanh cong");
 
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
@@ -130,8 +134,8 @@ public class LoginActivity extends AppCompatActivity {
 
         btnDK1 = (Button) findViewById(R.id.btn_dangky_login);
         btnDN1 = (Button) findViewById(R.id.btn_dangNhap_Login);
-        dienthoai = (EditText) findViewById(R.id.edtDienThoai);
-        matkhau = (EditText) findViewById(R.id.edt_login_pass);
+        edPhone = (EditText) findViewById(R.id.edtDienThoai);
+        edPass = (EditText) findViewById(R.id.edt_login_pass);
         btnBack = (ImageButton) findViewById(R.id.btn_login_back);
 
         localData = new LocalData(LoginActivity.this,"sttAccount", null, 1);
@@ -143,19 +147,12 @@ public class LoginActivity extends AppCompatActivity {
     public void CreateLocalData()
     {
         // Tao bang tai khoan
-        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), TrangThai VARCHAR(10))";
+        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Name VARCHAR(100), Phone VARCHAR(50), Pass VARCHAR(50), TrangThai VARCHAR(10))";
         localData.AddData(queryTaoBang);
 
         // Tao bang kiem tra lan khoi dong
         String queryTaoBangCheck = "Create Table if not exists CheckLogin (ID Integer Primary Key, Stt VARCHAR(10))";
         localData.AddData(queryTaoBangCheck);
-    }
-
-    private void Logout(String curTaiKhoan) {
-
-        String queryLogout = "Update TaiKhoan Set TrangThai = 'false' Where TaiKhoan = '" + curTaiKhoan + "'";
-        localData.AddData(queryLogout);
-
     }
 
     public Cursor GetLocalData(String queryLayTaiKhoan)
@@ -164,9 +161,9 @@ public class LoginActivity extends AppCompatActivity {
         return cursor;
     }
 
-    public void InsertAccountLocal(String phone, String pass, String stt)
+    public void InsertAccountLocal(String name ,String phone, String pass, String stt)
     {
-        String queryTaoTaiKhoan = "Insert Into TaiKhoan values (null, '" + phone + "',  '" + pass + "', '" + stt + "')";
+        String queryTaoTaiKhoan = "Insert Into TaiKhoan values (null, '" + name + "', '" + phone + "',  '" + pass + "', '" + stt + "')";
         localData.AddData(queryTaoTaiKhoan);
     }
 
