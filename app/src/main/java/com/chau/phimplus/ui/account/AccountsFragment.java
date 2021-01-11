@@ -242,8 +242,13 @@ public class AccountsFragment extends Fragment {
                         txtAccountName.setVisibility(View.VISIBLE);
 
                         // Nếu đã đăng nhập thì hiện chức năng ĐĂNG XUẤT
-                        chucNang.add("Đăng xuất");
-                        iconRow.add(R.drawable.ic_logout_02);
+
+                        if (chucNang.get(chucNang.size()-1).toString().equalsIgnoreCase("Đăng xuất") == false)
+                        {
+                            chucNang.add("Đăng xuất");
+                            iconRow.add(R.drawable.ic_logout_02);
+                        }
+
                     }
                 }
             }
