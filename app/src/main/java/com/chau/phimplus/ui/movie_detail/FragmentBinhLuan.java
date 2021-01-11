@@ -76,6 +76,7 @@ public class FragmentBinhLuan extends Fragment implements CommentAdapter.OnComme
     public ArrayList<Comment> getComment(int movieId){
 
         Dataserver dataserver = APIserver.getServer();
+
         Call<ArrayList<Comment>> callback = dataserver.getComment("2");
         callback.enqueue(new Callback<ArrayList<Comment>>() {
             @Override

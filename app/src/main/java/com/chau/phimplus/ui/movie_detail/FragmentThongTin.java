@@ -1,9 +1,7 @@
 package com.chau.phimplus.ui.movie_detail;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +9,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -23,9 +19,6 @@ import com.bumptech.glide.Glide;
 import com.chau.phimplus.Models.Phim;
 import com.chau.phimplus.R;
 import com.chau.phimplus.ui.home.HomeFragment;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 public class FragmentThongTin extends Fragment {
 
@@ -50,6 +43,13 @@ public class FragmentThongTin extends Fragment {
                 // Create and show the dialog.
                 Dialog_trailer newFragment = new Dialog_trailer ();
                 newFragment.show(ft, "dialog");
+            }
+        });
+        btnMuaVe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Setup_ticket.class);
+                startActivity(intent);
             }
         });
 
