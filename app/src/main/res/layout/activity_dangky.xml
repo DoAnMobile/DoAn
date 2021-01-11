@@ -52,12 +52,29 @@
             />
 
         <EditText
-            android:hint="Họ và tên"
-            android:id="@+id/edtHoTen"
+            android:hint="Họ"
+            android:id="@+id/edtHo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
              />
+
+        <EditText
+            android:hint="Tên"
+            android:id="@+id/edtTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:hint="Số điện thoại"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edtSDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:inputType="phone" />
 
         <EditText
             android:hint="Mật khẩu"
@@ -75,15 +92,6 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:inputType="textPassword" />
-
-        <EditText
-            android:hint="Số điện thoại"
-            android:layout_marginTop="10dp"
-            android:id="@+id/edtSDT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:inputType="phone" />
 
         <Button
             android:id="@+id/btnDangKy1"
