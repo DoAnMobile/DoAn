@@ -17,7 +17,7 @@ import retrofit2.http.Query;
 public interface Dataserver {
 
 	//CALL API Login.php
-    @GET("login.php")
+    @GET("get_account.php")
     Call<List<TaiKhoan>> getTaiKhoan();
 
     @POST("register.php")
