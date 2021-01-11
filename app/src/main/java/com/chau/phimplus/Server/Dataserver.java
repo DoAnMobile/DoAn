@@ -4,6 +4,7 @@ import com.chau.phimplus.Models.TaiKhoan;
 import com.chau.phimplus.ui.movie_detail.comment.models.Comment;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;
@@ -20,11 +21,13 @@ public interface Dataserver {
     @GET("get_account.php")
     Call<List<TaiKhoan>> getTaiKhoan();
 
-    @POST("register.php")
+    @POST("create_account.php")
     @FormUrlEncoded
     Call<List<TaiKhoan>> savePost(
-            @Field("Phone") String Phone,
-            @Field("Password") String Password
+            @Field("first_name") String first_name,
+            @Field("last_name") String last_name,
+            @Field("phone") String phone,
+            @Field("password") String password
     );
 
 
