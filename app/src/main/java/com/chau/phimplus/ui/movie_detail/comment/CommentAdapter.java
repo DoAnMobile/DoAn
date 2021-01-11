@@ -124,13 +124,7 @@ public class CommentAdapter
                 recyclerViewHolder.txt_content.setLayoutParams(size);
             }
 
-//vay???
-            // d m chan deo muon noi
-            //roi` h lam s de t day het code nay len master luon
-            //dang o trong branch cua t sao day~
-            //copy wa
-//            choi luon nhe
-            
+
         }
 
     }

@@ -11,11 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.movie_detail.Setup_ticket"></activity>
+        <activity android:name=".setup_ticket" />
+
         <activity android:name=".ui.Account" />
         <activity android:name=".ui.GioHangActivity" />
         <activity android:name=".ui.DangKy" />
         <activity android:name=".ui.row_list_account" />
-        <activity android:name=".ui.movie_detail.MainActivity_MovieDetail"/>
+        <activity android:name=".ui.movie_detail.MainActivity_MovieDetail" />
+
+
         <activity
             android:name=".ui.ChiTietphim"
             android:screenOrientation="portrait" />

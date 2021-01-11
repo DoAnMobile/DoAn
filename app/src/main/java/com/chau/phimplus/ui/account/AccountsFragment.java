@@ -188,6 +188,15 @@ public class AccountsFragment extends Fragment {
     // Tạo Local data
     public void CreateLocalData()
     {
+
+
+        // Tạo bản tài khoản
+        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Phone VARCHAR(50), Pass VARCHAR(50), TrangThai VARCHAR(10))";
+        localData.AddData(queryTaoBang);
+
+        // Tạo bảng kiểm tra lần đầu khởi động
+        String queryTaoBangCheck = "Create Table if not exists CheckLogin (ID Integer Primary Key, Stt VARCHAR(10))";
+        localData.AddData(queryTaoBangCheck);
         // Tao bang tai khoan
         String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Name VARCHAR(100), Phone VARCHAR(50), Pass VARCHAR(50), TrangThai VARCHAR(10))";
         localData.AddData(queryTaoBang);
@@ -229,11 +238,16 @@ public class AccountsFragment extends Fragment {
                 Cursor cursor = GetLocalData(queryLayTaiKhoan);
                 while (cursor.moveToNext())
                 {
+                    if (cursor.getString(3).trim().equalsIgnoreCase("true"))
+                    {
+                        // Lấy tên tài khoản
+                        curTaiKhoan = cursor.getString(1);
                     // Nếu stt của tài khoản là true thì chạy
                     if (cursor.getString(4).trim().equalsIgnoreCase("true"))
                     {
                         // Lấy tên tài khoản
                         curTaiKhoan = cursor.getString(2);
+
 
                         // Nếu đã đăng nhập thì tắt nút ĐĂNG NHẬP
                         String nameAcc = cursor.getString(1);
@@ -243,11 +257,16 @@ public class AccountsFragment extends Fragment {
 
                         // Nếu đã đăng nhập thì hiện chức năng ĐĂNG XUẤT
 
+                        chucNang.add("Đăng xuất");
+                        iconRow.add(R.drawable.ic_logout_02);
+
+
                         if (chucNang.get(chucNang.size()-1).toString().equalsIgnoreCase("Đăng xuất") == false)
                         {
                             chucNang.add("Đăng xuất");
                             iconRow.add(R.drawable.ic_logout_02);
                         }
+
 
                     }
                 }
