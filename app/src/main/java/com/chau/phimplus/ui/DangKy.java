@@ -25,7 +25,7 @@ public class DangKy extends AppCompatActivity {
 
     Button btnDN1, btnDK;
     ImageButton btnBack;
-    EditText edPhone, edPass, edRePass;
+    EditText edPhone, edPass, edRePass, edHo, edTen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +69,8 @@ public class DangKy extends AppCompatActivity {
         edPass = (EditText) findViewById(R.id.edtPassword1);
         edPhone = (EditText) findViewById(R.id.edtSDT);
         edRePass = (EditText) findViewById(R.id.edtPasswordAgain);
+        edHo = (EditText) findViewById(R.id.edtHo);
+        edTen = (EditText) findViewById(R.id.edtTen);
 
     }
 
@@ -81,6 +83,8 @@ public class DangKy extends AppCompatActivity {
                 String Phone = edPhone.getText().toString();
                 String Pass = edPass.getText().toString();
                 String reMatKhau = edRePass.getText().toString();
+                String Ho = edHo.getText().toString();
+                String Ten = edTen.getText().toString();
 
                 if (Phone.length() > 10)
                 {
@@ -101,7 +105,7 @@ public class DangKy extends AppCompatActivity {
                 else {
 
                     // INSERT DATA
-                    InsertData(Phone, Pass);
+                    InsertData(Ho, Ten, Phone, Pass);
 
                     finish();
 
@@ -112,12 +116,12 @@ public class DangKy extends AppCompatActivity {
 
     }
 
-    public void InsertData(String Phone, String Pass){
+    public void InsertData(String Ho, String Ten, String Phone, String Pass){
 
         Dataserver dataserver = APIserver.getServer();
         Call<List<TaiKhoan>> callback ;
 
-        callback = dataserver.savePost(Phone, Pass);
+        callback = dataserver.savePost(Ho, Ten, Phone, Pass);
 
         callback.enqueue(new Callback<List<TaiKhoan>>() {
             @Override
