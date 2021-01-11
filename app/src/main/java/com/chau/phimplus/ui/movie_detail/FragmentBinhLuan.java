@@ -16,23 +16,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chau.phimplus.R;
-
 import com.chau.phimplus.Server.APIserver;
 import com.chau.phimplus.Server.Dataserver;
-
 import com.chau.phimplus.ui.movie_detail.comment.CommentAdapter;
 import com.chau.phimplus.ui.movie_detail.comment.models.Comment;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
-
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 
 public class FragmentBinhLuan extends Fragment implements CommentAdapter.OnCommentListener {
 
@@ -56,26 +52,6 @@ public class FragmentBinhLuan extends Fragment implements CommentAdapter.OnComme
 
         getComment(2);
 
-        //Add data
-        listComments.add(new Comment(1,1,this.getString(R.string.test_long),1));
-        listComments.add(new Comment(2,1,"",2));
-        listComments.add(new Comment(3,1,"Content 3",3));
-        listComments.add(new Comment(4,1,"Content 4",4));
-        listComments.add(new Comment(5,1,"Content 5",5));
-        listComments.add(new Comment(6,1,"Content 6",1));
-        listComments.add(new Comment(1,1,this.getString(R.string.test_long),1));
-        listComments.add(new Comment(2,1,"",2));
-        listComments.add(new Comment(3,1,"Content 3",3));
-        listComments.add(new Comment(4,1,"Content 4",4));
-        listComments.add(new Comment(5,1,"Content 5",5));
-        listComments.add(new Comment(6,1,"Content 6",1));
-        listComments.add(new Comment(1,1,this.getString(R.string.test_long),1));
-        listComments.add(new Comment(2,1,"",2));
-        listComments.add(new Comment(3,1,"Content 3",3));
-        listComments.add(new Comment(4,1,"Content 4",4));
-        listComments.add(new Comment(5,1,"Content 5",5));
-        listComments.add(new Comment(6,1,"Content 6",1));
-
         // Create adapter passing in the sample user data
         CommentAdapter commentAdapter = new CommentAdapter(getContext(),listComments,this);
 
@@ -96,7 +72,6 @@ public class FragmentBinhLuan extends Fragment implements CommentAdapter.OnComme
 //        listComments.get(position);
 
     }
-
 
     public ArrayList<Comment> getComment(int movieId){
 
