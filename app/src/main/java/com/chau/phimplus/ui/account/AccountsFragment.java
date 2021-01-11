@@ -197,13 +197,6 @@ public class AccountsFragment extends Fragment {
         // Tạo bảng kiểm tra lần đầu khởi động
         String queryTaoBangCheck = "Create Table if not exists CheckLogin (ID Integer Primary Key, Stt VARCHAR(10))";
         localData.AddData(queryTaoBangCheck);
-        // Tao bang tai khoan
-        String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Name VARCHAR(100), Phone VARCHAR(50), Pass VARCHAR(50), TrangThai VARCHAR(10))";
-        localData.AddData(queryTaoBang);
-
-        // Tao bang kiem tra lan khoi dong
-        String queryTaoBangCheck = "Create Table if not exists CheckLogin (ID Integer Primary Key, Stt VARCHAR(10))";
-        localData.AddData(queryTaoBangCheck);
     }
 
     // Hàm đăng xuất -> thay đổi trang thái tài khoản đang đăng nhập
@@ -224,80 +217,73 @@ public class AccountsFragment extends Fragment {
     }
 
     // Check đăng nhập (lấy từ local data)
-    public void CheckLogin()
-    {
+    public void CheckLogin() {
 
         String getID = "Select MAX(ID) from CheckLogin";
         Cursor curID = GetLocalData(getID);
 
-        while (curID.moveToNext())
-        {
-            if (curID.getInt(0) == 1)
-            {
+        while (curID.moveToNext()) {
+            if (curID.getInt(0) == 1) {
                 String queryLayTaiKhoan = "Select * From TaiKhoan";
                 Cursor cursor = GetLocalData(queryLayTaiKhoan);
-                while (cursor.moveToNext())
-                {
-                    if (cursor.getString(3).trim().equalsIgnoreCase("true"))
-                    {
+                while (cursor.moveToNext()) {
+                    if (cursor.getString(3).trim().equalsIgnoreCase("true")) {
                         // Lấy tên tài khoản
                         curTaiKhoan = cursor.getString(1);
-                    // Nếu stt của tài khoản là true thì chạy
-                    if (cursor.getString(4).trim().equalsIgnoreCase("true"))
-                    {
-                        // Lấy tên tài khoản
-                        curTaiKhoan = cursor.getString(2);
+                        // Nếu stt của tài khoản là true thì chạy
+                        if (cursor.getString(4).trim().equalsIgnoreCase("true")) {
+                            // Lấy tên tài khoản
+                            curTaiKhoan = cursor.getString(2);
 
 
-                        // Nếu đã đăng nhập thì tắt nút ĐĂNG NHẬP
-                        String nameAcc = cursor.getString(1);
-                        btnLogin.setVisibility(View.INVISIBLE);
-                        txtAccountName.setText(nameAcc);
-                        txtAccountName.setVisibility(View.VISIBLE);
+                            // Nếu đã đăng nhập thì tắt nút ĐĂNG NHẬP
+                            String nameAcc = cursor.getString(1);
+                            btnLogin.setVisibility(View.INVISIBLE);
+                            txtAccountName.setText(nameAcc);
+                            txtAccountName.setVisibility(View.VISIBLE);
 
-                        // Nếu đã đăng nhập thì hiện chức năng ĐĂNG XUẤT
+                            // Nếu đã đăng nhập thì hiện chức năng ĐĂNG XUẤT
 
-                        chucNang.add("Đăng xuất");
-                        iconRow.add(R.drawable.ic_logout_02);
-
-
-                        if (chucNang.get(chucNang.size()-1).toString().equalsIgnoreCase("Đăng xuất") == false)
-                        {
                             chucNang.add("Đăng xuất");
                             iconRow.add(R.drawable.ic_logout_02);
+
+
+                            if (chucNang.get(chucNang.size() - 1).toString().equalsIgnoreCase("Đăng xuất") == false) {
+                                chucNang.add("Đăng xuất");
+                                iconRow.add(R.drawable.ic_logout_02);
+                            }
+
+
                         }
-
-
                     }
                 }
             }
+
         }
-
     }
-
-    // Lần đầu đăng nhập -> thêm vào Local Data
-    public void CreateFirstLogin()
-    {
-
-        String queryCheck = "Insert Into CheckLogin values (1, 'true')";
-
-        String getID = "Select MAX(ID) from CheckLogin";
-        Cursor curID = GetLocalData(getID);
-
-        while (curID.moveToNext())
+        // Lần đầu đăng nhập -> thêm vào Local Data
+        public void CreateFirstLogin()
         {
-            if (curID.getInt(0) != 1)
+
+            String queryCheck = "Insert Into CheckLogin values (1, 'true')";
+
+            String getID = "Select MAX(ID) from CheckLogin";
+            Cursor curID = GetLocalData(getID);
+
+            while (curID.moveToNext())
             {
-                localData.AddData(queryCheck);
+                if (curID.getInt(0) != 1)
+                {
+                    localData.AddData(queryCheck);
+                }
             }
+
+        }
+
+        // Hàm Toast nhanh
+        public void Mess(String text)
+        {
+            Toast.makeText(getContext(),text,Toast.LENGTH_SHORT).show();
         }
 
     }
-
-    // Hàm Toast nhanh
-    public void Mess(String text)
-    {
-        Toast.makeText(getContext(),text,Toast.LENGTH_SHORT).show();
-    }
-
-}
