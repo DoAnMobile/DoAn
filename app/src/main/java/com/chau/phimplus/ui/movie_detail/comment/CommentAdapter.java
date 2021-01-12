@@ -68,7 +68,6 @@ public class CommentAdapter
         init(holder);
 
         try{
-
             if(holder.txt_content.getText().toString().equals("")){
                 LinearLayout.LayoutParams  size = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1);
                 holder.txt_content.setLayoutParams(size);

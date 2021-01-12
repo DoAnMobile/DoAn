@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="#70EABD7B"
+    tools:context=".ui.movie_detail.Setup_ticket">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalScrollbarPosition="right">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:text="Chi nhánh"/>
+    <Spinner
+        android:id="@+id/spiner_branch"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:outlineSpotShadowColor="@color/colorAccent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:text="Rạp"/>
+    <Spinner
+        android:id="@+id/spiner_cinema"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:outlineSpotShadowColor="@color/colorAccent"/>
+        <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="24dp"
+        android:text="Ngày"/>
+        <Spinner
+            android:id="@+id/spiner_screening"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:outlineSpotShadowColor="@color/colorAccent"/>
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="24dp"
+            android:text="Ghế"/>
+        <Spinner
+            android:id="@+id/spiner_seat"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:outlineSpotShadowColor="@color/colorAccent"/>
+
+    </LinearLayout>
+    </ScrollView>
+        <Button
+            android:id="@+id/button_datve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_btn"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="#FFFFFF"
+
+            android:text="Đặt vé"/>
+    </RelativeLayout>
+
+</LinearLayout>

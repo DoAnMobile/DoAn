@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class TaiKhoan {
 
+
     @SerializedName("FisrtName")
     @Expose
     private String fisrtName;
@@ -17,7 +18,9 @@ public class TaiKhoan {
     @SerializedName("Password")
     @Expose
     private String password;
-
+    @SerializedName("Status")
+    @Expose
+    private String status;
     public String getFisrtName() {
         return fisrtName;
     }
@@ -50,4 +53,11 @@ public class TaiKhoan {
         this.password = password;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
