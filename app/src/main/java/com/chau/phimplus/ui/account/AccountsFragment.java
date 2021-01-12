@@ -188,7 +188,7 @@ public class AccountsFragment extends Fragment {
     // Tạo Local data
     public void CreateLocalData()
     {
-        // Tao bang tai khoan
+        // Tao bang tai khoan da chay
         String queryTaoBang = "Create Table if not exists TaiKhoan (ID Integer Primary Key AutoIncrement, Name VARCHAR(100), Phone VARCHAR(50), Pass VARCHAR(50), TrangThai VARCHAR(10))";
         localData.AddData(queryTaoBang);
 
